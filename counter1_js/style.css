@@ -1,0 +1,71 @@
+*,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    gap: 2rem;
+    height: 100vh;
+    background-color: skyblue;
+    color: black;
+}
+
+#counter{
+    font-size: 6rem;
+}
+
+#buttons{
+    display: flex;
+    gap: 1rem;
+}
+
+#buttons button{
+    border: none;
+    background-color: white;
+    box-shadow: 0px 0px 10px gray;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 250ms ease-in-out, transform 50ms ease-in-out;
+}
+
+#buttons button:hover{
+    background-color: gray;
+}
+
+#buttons button:active{
+    transform: scale(0.9);
+}
+
+.negative{
+    color: red;
+    animation: pulse 500ms ease-in-out;
+}
+
+.positive{
+    color: rgb(17, 3, 218);
+    animation: pulse 500ms ease-in-out;
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.5);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
